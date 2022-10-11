@@ -16,10 +16,16 @@ main {
     height: 100vh;
     text-align: center;
 
+    padding: 1rem;
     color: gold;
+    text-shadow: 3px 3px 2px #00000070;
     background-color: brown;
 }
 
 .mail-container {
     padding: 3rem;
+}
+
+button {
+    padding: 0.5rem;
 }
