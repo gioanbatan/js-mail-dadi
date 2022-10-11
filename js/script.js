@@ -22,7 +22,10 @@
 // DATI
 // Lista degli mail degli utenti con l'accesso consentito
 const mailList = ["olga@boolean.com", "marco@boolean.com", "mauro@boolean.com", "adriano@boolean.com"];
+let userAccessGranted = false;
+
 console.log(mailList, typeof(mailList));
+
 
 // INPUT
 // Chiedere all'utente di inserire al propria mail
@@ -36,11 +39,20 @@ for (let i = 0; i < mailList.length; i++) {
     console.log(i, "Mail:", mailCompare);
 
     // SE la mail inserita dall'utente corrisponde all'elemento della lista 
-    // if 
+    if (userMailInput === mailCompare) {
+        userAccessGranted = true;
+    }
+    //  consenso all'accesso dell'utente consentito
+    // ALTRIMENTI 
+    //  consenso all'accesso dell'utente negato
 }
-//  consenso all'accesso dell'utente consentito
-// ALTRIMENTI 
-//  consenso all'accesso dell'utente negato
+console.log("Comparison is ", userAccessGranted)
 
 // OUTPUT
 // Messaggio che visualizza il consenso all'accesso dell'utente
+if (userAccessGranted) {
+    alert("Accesso consentito");
+} else {
+    alert("Accesso negato");
+}
+
