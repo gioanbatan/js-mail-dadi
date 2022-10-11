@@ -17,6 +17,19 @@ html {
     background-color: cadetblue;
 }
 
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: #eeeeff;
+    color: cadetblue;
+    margin: 2rem;
+    padding: 2rem;
+
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 #000000;
+}
+
 /* UTILITIES */
 .hidden {
     display: none;
@@ -45,7 +58,7 @@ main {
 }
 
 @media screen and (min-width: 576px) {
-    
+
     .dice-card i {
         font-size: 10rem;
     }
