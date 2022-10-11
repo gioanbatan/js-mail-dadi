@@ -21,13 +21,23 @@
 
 // DATI
 // Lista degli mail degli utenti con l'accesso consentito
+const mailList = ["olga@boolean.com", "marco@boolean.com", "mauro@boolean.com", "adriano@boolean.com"];
+console.log(mailList, typeof(mailList));
 
 // INPUT
 // Chiedere all'utente di inserire al propria mail
+const userMailInput = prompt("Inserire la mail:");
+console.log(userMailInput); 
 
 // ELABORAZIONE DATI
 // PER ogni elemento della lista email
-// SE la mail inserita dall'utente corrisponde all'elemento della lista 
+for (let i = 0; i < mailList.length; i++) {
+    const mailCompare = mailList[i];
+    console.log(i, "Mail:", mailCompare);
+
+    // SE la mail inserita dall'utente corrisponde all'elemento della lista 
+    // if 
+}
 //  consenso all'accesso dell'utente consentito
 // ALTRIMENTI 
 //  consenso all'accesso dell'utente negato
