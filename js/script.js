@@ -20,6 +20,9 @@
 // Dado dell'utente (num. possibile da 1 a 6)
 // Dado del computer (num. possibile da 1 a 6)
 
+// Stato della vincita
+let result = "";
+
 // INPUT
 
 // ELABORAZIONE DATI
@@ -29,12 +32,19 @@ const userDice = Math.floor(Math.random() * (7 - 1)) + 1;
 const computerDice = Math.floor(Math.random() * (7 - 1)) + 1;
 console.log(userDice, computerDice);
 
-// SE numero utente è uguale a numero computer
-//  il risultato è parità
-// ALTRIMENTI SE numero utente è maggiore di numero computer
-//  il risultato è vittoria dell'utente
-// ALTRIMENTI
-//  il risultato è vittoria del computer
-
+if (userDice === computerDice) {
+    // SE numero utente è uguale a numero computer
+    //  il risultato è parità
+    result = "Parità!";
+} else if (userDice > computerDice) {
+    // ALTRIMENTI SE numero utente è maggiore di numero computer
+    //  il risultato è vittoria dell'utente
+    result = "L'utente vince!"
+} else {
+    // ALTRIMENTI
+    //  il risultato è vittoria del computer
+    result = "Il computer vince!"
+}
 // OUTPUT
 // Comunicazione del risultato
+console.log(result);
