@@ -24,7 +24,10 @@
 
 // ELABORAZIONE DATI
 // Creazione di un numero casuale per l'utente
+const userDice = Math.floor(Math.random() * (7 - 1)) + 1;
 // Creazione di un numero casuale per il computer
+const computerDice = Math.floor(Math.random() * (7 - 1)) + 1;
+console.log(userDice, computerDice);
 
 // SE numero utente è uguale a numero computer
 //  il risultato è parità
