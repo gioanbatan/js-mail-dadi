@@ -8,7 +8,37 @@
 html {
     width: 100%;
     height: 100vh;
-    font-size: 100%;
 
+    font-size: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+    color: #eeeeff;
     background-color: cadetblue;
+}
+
+/* UTILITIES */
+.hidden {
+    display: none;
+}
+
+/* COMMON */
+main {
+    padding: 3rem;
+}
+
+/* MAIN */
+.dice-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+
+    padding: 3rem 0;
+}
+
+.dice-card {
+    color: #eeeeff;
+    text-shadow: 3px 3px 0 #000000;
+    font-size: 5rem;
 }

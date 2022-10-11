@@ -16,6 +16,17 @@
 // 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 // Buon lavoro e buon divertimento! :faccia_leggermente_sorridente: :paperella:
 
+// Elementi di Output
+const h2Result = document.getElementById("result");
+console.log(h2Result);
+
+// Immagini dei dadi
+const imgElementUserDice = document.getElementById("user-dice");
+let imgUserDice= "";
+
+const imgElementComputerDice = document.getElementById("computer-dice");
+let imgComputerDice = "";
+
 // DATI
 // Dado dell'utente (num. possibile da 1 a 6)
 // Dado del computer (num. possibile da 1 a 6)
@@ -28,8 +39,72 @@ let result = "";
 // ELABORAZIONE DATI
 // Creazione di un numero casuale per l'utente
 const userDice = Math.floor(Math.random() * (7 - 1)) + 1;
+
+// Creazione grafica del dado dell'utente
+switch (userDice) {
+    
+    case 1:
+        imgUserDice = "one";
+        break;
+    
+    case 2:
+        imgUserDice = "two";
+        break;
+        
+    case 3:
+        imgUserDice = "three";
+        break;
+    
+    case 4:
+        imgUserDice = "four";
+        break;
+    
+    case 5:
+        imgUserDice = "five";
+        break;
+        
+    case 6:
+        imgUserDice = "six";
+        break;
+}
+console.log(imgUserDice);
+// Composizione dell'icona per l'utente
+imgElementUserDice.classList.add(`fa-dice-${imgUserDice}`);
+
 // Creazione di un numero casuale per il computer
 const computerDice = Math.floor(Math.random() * (7 - 1)) + 1;
+
+// Creazione grafica del dado dell'utente
+switch (computerDice) {
+    
+    case 1:
+        imgComputerDice = "one";
+        break;
+        
+    case 2:
+        imgComputerDice = "two";
+        break;
+            
+    case 3:
+        imgComputerDice = "three";
+        break;
+                
+    case 4:
+        imgComputerDice = "four";
+        break;
+    
+    case 5:
+        imgComputerDice = "five";
+        break;
+        
+    case 6:
+        imgComputerDice = "six";
+        break;
+}
+console.log (imgComputerDice);
+// Composizione dell'icona per l'utente
+imgElementComputerDice.classList.add(`fa-dice-${imgComputerDice}`);
+
 console.log(userDice, computerDice);
 
 if (userDice === computerDice) {
@@ -48,3 +123,4 @@ if (userDice === computerDice) {
 // OUTPUT
 // Comunicazione del risultato
 console.log(result);
+h2Result.innerHTML = result;
