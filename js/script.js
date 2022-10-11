@@ -26,33 +26,39 @@ let userAccessGranted = false;
 
 console.log(mailList, typeof(mailList));
 
-
 // INPUT
 // Chiedere all'utente di inserire al propria mail
-const userMailInput = prompt("Inserire la mail:");
-console.log(userMailInput); 
+// Prendo il valore della casella di input
+const userMailInput = document.getElementById("user-mail").value;
+// Inserisco l'elemento bottone in una const
+const sendBtn = document.getElementById("send-mail");
+console.log(userMailInput);
 
 // ELABORAZIONE DATI
-// PER ogni elemento della lista email
-for (let i = 0; i < mailList.length; i++) {
-    const mailCompare = mailList[i];
-    console.log(i, "Mail:", mailCompare);
+// Ascolto bottone Invia
+sendBtn.addEventListener ("click", function() {
+    console.log("sendBtn click");
 
-    // SE la mail inserita dall'utente corrisponde all'elemento della lista 
-    if (userMailInput === mailCompare) {
-        userAccessGranted = true;
+    // PER ogni elemento della lista email
+    for (let i = 0; i < mailList.length; i++) {
+        const mailCompare = mailList[i];
+        console.log(i, "Mail:", mailCompare);
+
+        // SE la mail inserita dall'utente corrisponde all'elemento della lista 
+        if (userMailInput === mailCompare) {
+            userAccessGranted = true;
+        }
+        //  consenso all'accesso dell'utente consentito
+        // ALTRIMENTI 
+        //  consenso all'accesso dell'utente negato
     }
-    //  consenso all'accesso dell'utente consentito
-    // ALTRIMENTI 
-    //  consenso all'accesso dell'utente negato
-}
-console.log("Comparison is ", userAccessGranted)
+    console.log("Comparison is ", userAccessGranted)
 
-// OUTPUT
-// Messaggio che visualizza il consenso all'accesso dell'utente
-if (userAccessGranted) {
-    alert("Accesso consentito");
-} else {
-    alert("Accesso negato");
-}
-
+    // OUTPUT
+    // Messaggio che visualizza il consenso all'accesso dell'utente
+    if (userAccessGranted) {
+        alert("Accesso consentito");
+    } else {
+        alert("Accesso negato");
+    }
+})
